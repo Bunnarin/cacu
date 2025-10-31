@@ -1,8 +1,6 @@
 import {SERVICE_ACC_EMAIL, SERVICE_ACC_KEY, SS_ID} from '$env/static/private';
 import { google } from 'googleapis';
 
-export const prerender = true;
-
 const auth = new google.auth.JWT({
   email: SERVICE_ACC_EMAIL,
   key: SERVICE_ACC_KEY.replace(/\\n/g, '\n'), // Fix escaped newlines
