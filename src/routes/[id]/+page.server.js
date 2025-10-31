@@ -8,15 +8,15 @@ const auth = new google.auth.JWT({
 });
 
 export async function load({params}) {
-    const sheets = google.sheets({ version: 'v4', auth });
-    const { data: indices } = await sheets.spreadsheets.values.get({
+    const sheets = google.sheets({ version: 'v4', auth }).spreadsheets;
+    const { data: indices } = await sheets.values.get({
       spreadsheetId: SS_ID,
       range: 'qr!A:A',
     });
 
     // first we find the index of the row first
     const rowIndex = indices.values.findIndex(([row]) => row === params.id);
-    const { data } = await sheets.spreadsheets.values.batchGet({
+    const { data } = await sheets.values.batchGet({
       spreadsheetId: SS_ID,
       ranges: [
         `qr!A1:Z1`,
