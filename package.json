@@ -16,7 +16,7 @@
 		"vite": "^7.1.10"
 	},
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/adapter-cloudflare": "^7.2.4",
 		"googleapis": "^164.1.0"
 	}
 }
