@@ -13,15 +13,12 @@
 				color: #333;
 			}
 
-			header {
-				padding: 1rem;
+			.header {
 				text-align: center;
 			}
 
-			header img {
+			.header img {
 				max-width: 120px;
-				display: block;
-				margin: 0 auto 0.5rem;
 				border-radius: 8px;
 			}
 
@@ -75,11 +72,10 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<header>
+		<div class="header">
 			<img src="%sveltekit.assets%/logo.jpg" alt="logo"/>
-			<h2>ព័ត៌មានផលិតផល</h2>
-			<h2>Product Information</h2>
-		</header>
+			<h2>ព័ត៌មានផលិតផល<br>Product Information</h2>
+		</div>
 		<div style="display: contents">
 			%sveltekit.body%
 		</div>
