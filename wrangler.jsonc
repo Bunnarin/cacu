@@ -1,7 +1,9 @@
 {
-    "name": "cacu",
-    "compatibility_date": "2025-10-31",
-    "assets": {
-        "directory": "./build"
-    }
+	"name": "cacu",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2025-01-01",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	}
 }
