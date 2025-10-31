@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="%sveltekit.assets%/logo.png" />
+		<style>
+			body {
+				font-family: 'Segoe UI', Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background: #f9fafb;
+				color: #333;
+			}
+
+			header {
+				padding: 1rem;
+				text-align: center;
+			}
+
+			header img {
+				max-width: 60px;
+				display: block;
+				margin: 0 auto 0.5rem;
+				border-radius: 8px;
+			}
+
+			.container {
+				max-width: 600px;
+				margin: 1.5rem auto;
+				background: white;
+				border-radius: 12px;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+				padding: 1rem;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+			}
+
+			td {
+				padding: 0.75rem;
+				border-bottom: 1px solid #eee;
+				word-break: break-word;
+				vertical-align: top;
+			}
+
+			td:first-child {
+				font-weight: 600;
+				color: #2e7d32;
+				width: 35%;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+				border-radius: 6px;
+				margin-top: 0.5rem;
+			}
+		</style>
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<header>
+			<img src="%sveltekit.assets%/logo.png" alt="logo"/>
+			<h2>Product Information</h2>
+		</header>
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
