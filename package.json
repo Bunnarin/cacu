@@ -17,6 +17,7 @@
 	},
 	"dependencies": {
 		"@sveltejs/adapter-cloudflare": "^7.2.4",
-		"googleapis": "^164.1.0"
+		"googleapis": "^164.1.0",
+		"wrangler": "^4.45.3"
 	}
 }
