@@ -6,14 +6,15 @@
   <table>
     <tbody>
       {#each Object.entries(data) as [key, value]}
+        {#if value.startsWith("https://drive.google.com/file/d/")}
+          {@const fileId = value.split("/d/")[1].split("/view")[0]}
+        {/if}
         <tr>
           <td>{key}</td>
           <td>
-            {#if value.startsWith("https://drive.google.com/file/d/")}
+            {#if fileId}
               <img
-                src={value
-                  .replace("file/d/", "thumbnail?id=")
-                  .replace("/view?usp=drive_link", "")}
+                src={`https://drive.google.com/thumbnail?id=${fileId}`}
                 alt={key}
               />
             {:else if value.startsWith("http")}
