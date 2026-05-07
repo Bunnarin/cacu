@@ -6,13 +6,11 @@
   <table>
     <tbody>
       {#each Object.entries(data) as [key, value]}
-        {#if value.startsWith("https://drive.google.com/file/d/")}
-          {@const fileId = value.split("/d/")[1].split("/view")[0]}
-        {/if}
         <tr>
           <td>{key}</td>
           <td>
-            {#if fileId}
+            {#if value.startsWith("https://drive.google.com/file/d/")}
+              {@const fileId = value.split("/d/")[1].split("/view")[0]}
               <img
                 src={`https://drive.google.com/thumbnail?id=${fileId}`}
                 alt={key}
