@@ -20,5 +20,5 @@ export async function load({ params }) {
 
   // Map headers to values
   const keys = values[0].slice(1);
-  return Object.fromEntries(keys.map((k, i) => [k, targetRow[i + 1]]));
+  return Object.fromEntries(keys.filter((_, i) => targetRow[i + 1]).map((k, i) => [k, targetRow[i + 1]]));
 }
